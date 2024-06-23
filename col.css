@@ -1,0 +1,83 @@
+.clours {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container123 {
+    text-align: center;
+    max-width: 90%; /* Adjust max-width as per your design */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.color-palette {
+    display: flex;
+    flex-wrap: wrap; /* Ensure colors wrap to next line on smaller screens */
+    justify-content: center; /* Center align colors */
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.color {
+    width: 80px; /* Adjust width of color box */
+    height: 80px; /* Adjust height of color box */
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.selected-color {
+    margin-top: 20px;
+}
+
+#selected-color-display {
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .color {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .color {
+        width: 50px;
+        height: 50px;
+    }
+}

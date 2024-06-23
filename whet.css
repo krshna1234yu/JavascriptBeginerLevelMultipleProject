@@ -1,0 +1,96 @@
+.wtf{
+    font-family: Arial, sans-serif;
+    background-color: green;
+    margin: 0;
+    overflow: hidden; /* Hide overflow to prevent scrollbars from appearing */
+    position: relative; /* Set position relative for absolute positioning */
+}
+
+/* Rainfall animation */
+.rainfall {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: 
+        linear-gradient(rgba(169, 169, 169, 0.5), rgba(169, 169, 169, 0.5)),
+        url('raindrop.png'); /* Replace with your raindrop image */
+    background-repeat: repeat;
+    pointer-events: none; /* Prevent interaction with the rainfall */
+    z-index: -1; /* Place behind other content */
+    animation: rain 1s linear infinite;
+}
+
+@keyframes rain {
+    from { background-position: 0 0; }
+    to { background-position: 0 50px; } /* Adjust distance between raindrops */
+}
+
+.container22 {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap between city cards */
+    position: relative; /* Ensure content stays above the rainfall */
+    z-index: 1; /* Ensure content stays above the rainfall */
+}
+
+.city {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: calc(100% / 3 - 80px); /* Adjust width to fit three columns with gap */
+    max-width: 300px;
+    margin: 5px;
+
+}
+
+.city h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.weather-details {
+    margin-top: 20px;
+}
+
+.weather-details > div {
+    margin-bottom: 10px;
+}
+
+.weather-details #weather-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.weather-details #location {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.weather-details #temperature {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.weather-details #description {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack cities vertically on smaller screens */
+        align-items: center;
+        margin-right: 5%;
+    }
+
+    .city {
+        width: calc(100% - 40px); /* Full width on smaller screens */
+    }
+}

@@ -1,0 +1,44 @@
+.lop{
+    font-family: Arial, sans-serif;
+    background-color:lightslategray;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container234 {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+}
+
+.converter {
+    margin-bottom: 20px;
+}
+
+input[type="number"], select, button {
+    margin: 5px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.o {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.o:hover {
+    opacity: 0.8;
+}
+
+#result {
+    font-size: 1.2em;
+}

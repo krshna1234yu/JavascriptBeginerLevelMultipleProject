@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Images</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="cal.css">
+    <link rel="stylesheet" href="count.css">
+    <link rel="stylesheet" href="col.css">
+    <link rel="stylesheet" href="cur.css">
+    <link rel="stylesheet" href="whet.css">
+    <link rel="stylesheet" href="quotes.css">
+    <link rel="stylesheet" href="slid.css">
+    <link rel="stylesheet" href="nu.css">
+    <link rel="stylesheet" href="for.css">
+
+</head>
+<body>
+    
+    <div class="todo">
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form id="todo-form">
+            <input type="text" id="new-task" placeholder="Add a new task..." required>
+            <input type="file" id="task-image" accept="image/*">
+            <button type="submit">Add</button>
+        </form>
+        <table id="todo-table">
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Task</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="todo-list"></tbody>
+        </table>
+    </div>
+    </div>
+    <div class="wtf">
+        <center><h1>Weather Information</h1></center>
+        <div class="container22">
+          <div class="city">
+                <h2>Vasai</h2>
+                <div class="weather-details" id="vasai-details">
+                    <div id="vasai-location"></div>
+                    <div id="vasai-temperature"></div>
+                    <div id="vasai-description"></div>
+                    <div id="vasai-icon"></div>
+                </div>
+            </div>
+    
+            <div class="city">
+                <h2>Virar</h2>
+                <div class="weather-details" id="virar-details">
+                    <div id="virar-location"></div>
+                    <div id="virar-temperature"></div>
+                    <div id="virar-description"></div>
+                    <div id="virar-icon"></div>
+                </div>
+            </div>
+    
+            <div class="city">
+                <h2>Mumbai</h2>
+                <div class="weather-details" id="mumbai-details">
+                    <div id="mumbai-location"></div>
+                    <div id="mumbai-temperature"></div>
+                    <div id="mumbai-description"></div>
+                    <div id="mumbai-icon"></div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <div class="qtf">
+        <div class="container23">
+            <h1>Random Quote Generator</h1><br>
+            <div id="quote-container">
+                <p id="quote">Click below to generate a random quote.</p>
+                <button id="generate-btn" onclick="generateQuote()">Generate Quote</button>
+            </div>
+        </div>
+    </div>
+    <div class="cal1">
+    <div class="calculator">
+        <div class="calculator-screen">
+            <div id="previous-operand" class="screen-content"></div>
+            <div id="current-operand" class="screen-content"></div>
+        </div>
+        <div class="calculator-buttons">
+            <button class="btn" data-value="AC">AC</button>
+            <button class="btn" data-value="±">±</button>
+            <button class="btn" data-value="%">%</button>
+            <button class="btn" data-value="√">√</button>
+            
+
+            <button class="btn" data-value="7">7</button>
+            <button class="btn" data-value="8">8</button>
+            <button class="btn" data-value="9">9</button>
+            <button class="btn operator" data-value="/">÷</button>
+           
+            <button class="btn" data-value="4">4</button>
+            <button class="btn" data-value="5">5</button>
+            <button class="btn" data-value="6">6</button>
+            <button class="btn operator" data-value="*">×</button>
+            
+            <button class="btn" data-value="1">1</button>
+            <button class="btn" data-value="2">2</button>
+            <button class="btn" data-value="3">3</button>
+            <button class="btn operator" data-value="-">−</button>
+
+            <button class="btn btn-zero" data-value="0">0</button>
+            <button class="btn" data-value=".">.</button>
+            <button class="btn equal btn-equal" data-value="=">=</button>
+            <button class="btn operator" data-value="+">+</button>
+        </div>
+    </div>
+</div>
+<div class="count1">
+    <div class="timer-container">
+        <div class="timer">
+            <div class="time" id="days">00</div>
+            <div class="label">Days</div>
+        </div>
+        <div class="timer">
+            <div class="time" id="hours">00</div>
+            <div class="label">Hours</div>
+        </div>
+        <div class="timer">
+            <div class="time" id="minutes">00</div>
+            <div class="label">Minutes</div>
+        </div>
+        <div class="timer">
+            <div class="time" id="seconds">00</div>
+            <div class="label">Seconds</div>
+        </div>
+    </div>
+    
+    <div class="input-container12">
+        <label for="days-input">Days:</label>
+        <input type="number" id="days-input" min="0" value="0">
+        <label for="hours-input">Hours:</label>
+        <input type="number" id="hours-input" min="0" max="23" value="0">
+        <label for="minutes-input">Minutes:</label>
+        <input type="number" id="minutes-input" min="0" max="59" value="5">
+        <label for="seconds-input">Seconds:</label>
+        <input type="number" id="seconds-input" min="0" max="59" value="0">
+        <button id="start-timer">Start Timer</button>
+    </div>
+</div>
+    <div class="clours">
+        <div class="container123">
+            <h1>Color Picker</h1>
+            <div class="color-palette">
+                <div class="color" style="background-color: #FF6347;"></div>
+                <div class="color" style="background-color: #FFD700;"></div>
+                <div class="color" style="background-color: #98FB98;"></div>
+                <div class="color" style="background-color: #87CEEB;"></div>
+                <div class="color" style="background-color: #9370DB;"></div>
+                <div class="color" style="background-color: #FFA07A;"></div>
+                <div class="color" style="background-color: #FA8072;"></div>
+                <div class="color" style="background-color: #E0FFFF;"></div>
+                <div class="color" style="background-color: #F0E68C;"></div>
+                <div class="color" style="background-color: #B0C4DE;"></div>
+                <div class="color" style="background-color: #AFEEEE;"></div>
+                <div class="color" style="background-color: #FF69B4;"></div>
+                <div class="color" style="background-color: #7B68EE;"></div>
+                <div class="color" style="background-color: #3CB371;"></div>
+                <div class="color" style="background-color: #00BFFF;"></div>
+                <div class="color" style="background-color: #FF4500;"></div>
+                <div class="color" style="background-color: #8A2BE2;"></div>
+                <div class="color" style="background-color: #4682B4;"></div>
+                <div class="color" style="background-color: #FF1493;"></div>
+                <div class="color" style="background-color: #48D1CC;"></div>
+                <!-- Additional Colors -->
+                <div class="color" style="background-color: #808000;"></div>
+                <div class="color" style="background-color: #FF6347;"></div>
+                <div class="color" style="background-color: #CD5C5C;"></div>
+                <div class="color" style="background-color: #F08080;"></div>
+                <div class="color" style="background-color: #E9967A;"></div>
+                <div class="color" style="background-color: #FA8072;"></div>
+                <div class="color" style="background-color: #FFA07A;"></div>
+                <div class="color" style="background-color: #FF7F50;"></div>
+                <div class="color" style="background-color: #FF6347;"></div>
+                <div class="color" style="background-color: #FF4500;"></div>
+                <div class="color" style="background-color: #FFD700;"></div>
+                <div class="color" style="background-color: #FFFF00;"></div>
+                <div class="color" style="background-color: #FFA500;"></div>
+                <div class="color" style="background-color: #FF8C00;"></div>
+                <div class="color" style="background-color: #FF7F50;"></div>
+                <div class="color" style="background-color: #FF6347;"></div>
+                <div class="color" style="background-color: #FF4500;"></div>
+                <div class="color" style="background-color: #FFD700;"></div>
+                <div class="color" style="background-color: #FFFF00;"></div>
+                <div class="color" style="background-color: #FFA500;"></div>
+            </div>
+            <div class="selected-color">
+                <h2>Selected Color:</h2>
+                <div id="selected-color-display">#FFFFFF</div>
+            </div>
+        </div>
+    
+    </div>
+    
+    <audio id="alarm-sound" src="mixkit-alarm-tone-996.mp3" preload="auto"></audio>
+    <button id="stop-alarm" style="display: none;">Stop Alarm</button>
+<div class="lop">
+    <div class="container234">
+        <h1>Currency Converter</h1>
+        <div class="converter">
+            <input type="number" id="amount" style="background-color: aliceblue;width: 180px;" placeholder="Enter amount">
+            <select id="fromCurrency">
+                <!-- Options will be added dynamically via JavaScript -->
+            </select>
+            <select id="toCurrency">
+                <!-- Options will be added dynamically via JavaScript -->
+            </select>
+            <button class="o" onclick="convertCurrency()">Convert</button>
+        </div>
+        <div id="result"></div>
+    </div>
+</div>
+<div class="numberg">
+    <div class="container00">
+        <h1>Number Guessing Game</h1>
+        <p>Guess a number between 1 and 100:</p>
+        <input type="number" id="guessField">
+        <button onclick="checkGuess()">Submit Guess</button>
+        <p id="message"></p>
+        <p>Attempts remaining: <span id="attempts">10</span></p>
+        <button onclick="resetGame()">Reset Game</button>
+    </div>
+
+</div>
+<div class="for1">
+    <div class="container90">
+        <h1>Form Validation</h1>
+        <form id="validationForm" onsubmit="validateForm(event)">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error-message" id="name-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="email-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                <div class="error-message" id="phone-error"></div>
+                <small>Format: 10 digits without spaces or dashes</small>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <div class="error-message" id="message-error"></div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</div>
+<div class="kya">
+    <center><h1 style="color: white;">IMAGE SLIDER</h1></center>
+    <div class="slider">
+        
+        <div class="slides">
+            <div class="flower"><img src="flo3.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo4.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo5.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo6.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo1.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo2.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo3.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo4.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo5.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo6.jpg" alt="Flower"></div>
+            <div class="slide"><img src="lord1.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="lord2.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="lord3.jpg" alt="Image 3"></div>
+            <div class="slide"><img src="lord4.jpg" alt="Image 4"></div>
+            <div class="flower"><img src="flo1.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo2.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo3.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo4.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo5.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo6.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo1.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo2.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo3.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo4.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo5.jpg" alt="Flower"></div>
+            <div class="flower"><img src="flo6.jpg" alt="Flower"></div>
+        </div>
+        <div class="controls124">
+            <button id="prev">❮</button>
+            <button id="next">❯</button>
+        </div>
+        <div class="indicators">
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+            <span class="indicator" data-slide="4"></span>
+        </div>
+    </div>
+</div>
+
+    <script src="script1.js"></script>
+    <script src="cal.js"></script>
+    <script src="count.js"></script>
+    <script src="col.js"></script>
+    <script src="cur.js"></script>
+    <script src="whet.js"></script>
+    <script src="quotes.js"></script>
+    <script src="slid.js"></script>
+    <script src="nu.js"></script>
+    <script src="for.js"></script>
+</body>
+</html>

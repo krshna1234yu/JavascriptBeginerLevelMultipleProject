@@ -1,0 +1,115 @@
+.todo{
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: lightgreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    border: 5px solid gray;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="file"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+td img {
+    max-width: 100px;
+    border-radius: 4px;
+}
+
+td button {
+    background-color: #dc3545;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+td button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        border-width: 3px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    input[type="text"], input[type="file"], button {
+        width: calc(100% - 20px);
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    td img {
+        max-width: 80px;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer with Alarm</title>
+    <link rel="stylesheet" href="count.css">
+</head>
+<body>
+    <div class="timer-container">
+        <div class="timer">
+            <div class="time" id="days">00</div>
+            <div class="label">Days</div>
+        </div>
+        <div class="timer">
+            <div class="time" id="hours">00</div>
+            <div class="label">Hours</div>
+        </div>
+        <div class="timer">
+            <div class="time" id="minutes">00</div>
+            <div class="label">Minutes</div>
+        </div>
+        <div class="timer">
+            <div class="time" id="seconds">00</div>
+            <div class="label">Seconds</div>
+        </div>
+    </div>
+    
+    <div class="input-container1">
+        <label for="days-input">Days:</label>
+        <input type="number" id="days-input" min="0" value="0">
+        <label for="hours-input">Hours:</label>
+        <input type="number" id="hours-input" min="0" max="23" value="0">
+        <label for="minutes-input">Minutes:</label>
+        <input type="number" id="minutes-input" min="0" max="59" value="5">
+        <label for="seconds-input">Seconds:</label>
+        <input type="number" id="seconds-input" min="0" max="59" value="0">
+        <button id="start-timer">Start Timer</button>
+    </div>
+    
+    <audio id="alarm-sound" src="mixkit-alarm-tone-996.mp3" preload="auto"></audio>
+    <button id="stop-alarm" style="display: none;">Stop Alarm</button>
+    
+    <script src="count.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+.kya{
+    font-family: Arial, sans-serif;
+    background:linear-gradient(black,red);
+    margin: 0;
+    overflow: hidden; /* Ensure the falling flowers don't cause scrollbars */
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.flower {
+    position: absolute;
+    top: -10%;
+    border-radius: 50%; /* Make the flowers circular */
+    opacity: 0.8;
+    animation: fall linear infinite;
+    mix-blend-mode: multiply; /* Blend the flowers with the background */
+}
+
+.flower img {
+    width: 70px; /* Set a uniform size for the flowers */
+    height: 70px;
+    border-radius: 50%; /* Ensure the images are circular */
+}
+
+.flower:nth-child(1) {
+    left: 10%;
+    animation-duration: 8s;
+    animation-delay: 0s;
+}
+
+.flower:nth-child(2) {
+    left: 25%;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+.flower:nth-child(3) {
+    left: 40%;
+    animation-duration: 12s;
+    animation-delay: 4s;
+}
+
+.flower:nth-child(4) {
+    left: 55%;
+    animation-duration: 14s;
+    animation-delay: 6s;
+}
+
+.flower:nth-child(5) {
+    left: 70%;
+    animation-duration: 16s;
+    animation-delay: 8s;
+}
+
+.flower:nth-child(6) {
+    left: 85%;
+    animation-duration: 18s;
+    animation-delay: 10s;
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px; /* Adjusted to fit the original format better */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin: 50px auto; /* Center the slider on the page */
+    z-index: 1; /* Ensure the slider is above the falling flowers */
+    background:linear-gradient(black,red);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%; /* Ensure each slide takes the full width of the slider */
+    display: flex;
+    justify-content: center; /* Center the image within the slide */
+}
+
+.slide img {
+    width: auto; /* Maintain original aspect ratio */
+    height: 400px; /* Set a uniform height */
+    margin: 0 10px; /* Add space between images */
+    object-fit: cover; /* Ensure the image covers the specified height */
+    border-radius: 20px;
+}
+
+.controls124 {
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.controls124 button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+   
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.controls124 button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.indicators .indicator {
+    height: 10px;
+    width: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.indicators .indicator.active {
+    background: white;
+}
